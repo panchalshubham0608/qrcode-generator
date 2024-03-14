@@ -29,3 +29,11 @@
     cursor: pointer;
     width: 256px;
 }
+
+/* Media Queries for mobile screens */
+@media (max-width: 426px) {
+    .qr-generator {
+        width: 100%;
+    }
+}
+
