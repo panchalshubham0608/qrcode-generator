@@ -88,6 +88,9 @@
     .qr-reader {
         width: 100%;
     }
+    .qr-scanned-result {
+        width: 100%;
+    }
 }
 
 @keyframes move-up-down {

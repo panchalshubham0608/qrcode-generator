@@ -1,0 +1,31 @@
+.qr-generator {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.qr-generator input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline-width: 0;
+    padding: 10px 0px;
+}
+
+.qr-container {
+    margin-top: 30px;
+}
+
+.download-qr-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 256px;
+}

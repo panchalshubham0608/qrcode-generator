@@ -60,6 +60,7 @@ export default function QRReader(props) {
                 scanner?.current.stop();
             }
         };
+        // eslint-disable-next-line
     }, []);
 
     let boxClass = ['qr-box'];
@@ -74,6 +75,7 @@ export default function QRReader(props) {
 
     return (
         <div className="qr-reader">
+            <h1 className="text-center">QR Code Scanner</h1>
             <video ref={videoRef} style={styles} />            
             <div ref={qrBoxRef} className={boxClass.join(' ')}>
                 <div className="qr-frame">
@@ -82,13 +84,14 @@ export default function QRReader(props) {
                         Sorry, we couldn't start the camera.
                         Check if your browser supports the camera and if it's enabled.
                     </p>}
+                    {!loading && scannerStarted &&
                     <img
                     src={QRFrame}
                     alt="QR Frame"
                     width={256}
                     height={256}
                     className="qr-frame"
-                    />
+                    />}
                     {!loading && scannerStarted && !qrData &&
                     <div className="qr-scanner-line"></div>}
                 </div>
