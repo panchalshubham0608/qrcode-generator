@@ -46,7 +46,7 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
     position: fixed;
-    top: 0;
+    top: 60px;
     left: 50%;
     transform: translateX(-50%) translateY(0%);
     min-width: 50%;
