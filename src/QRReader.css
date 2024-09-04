@@ -42,53 +42,9 @@
     animation: move-up-down 2s ease-in-out infinite;
 }
 
-.qr-scanned-result {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px 20px;
-    position: fixed;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%) translateY(0%);
-    min-width: 50%;
-}
-
-.qr-scanned-result input {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #000;
-    outline-width: 0;
-    padding: 10px 0px;
-    background-color: transparent;
-}
-
-.qr-scanned-result-close {
-    text-align: right;
-    margin-bottom: 10px;
-}
-
-.qr-scanned-result-close > button{
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.qr-open-result-button {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
 /* Media Queries for mobile screens */
 @media (max-width: 426px) {
     .qr-reader {
-        width: 100%;
-    }
-    .qr-scanned-result {
         width: 100%;
     }
 }

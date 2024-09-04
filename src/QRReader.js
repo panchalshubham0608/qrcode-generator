@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import QrScanner from "qr-scanner";
 import QRFrame from './assets/qr-frame.svg';
 import './QRReader.css';
+import QRReaderResult from "./QRReaderResult";
 
 export default function QRReader(props) {
     const scanner = React.useRef(); // Create a ref to the QRScanner component
@@ -23,12 +24,6 @@ export default function QRReader(props) {
     }
 
     const onCloseResult = () => setQrData("");
-    const openInNewWindow = () => {
-        if (qrData.length > 0) {
-            const win = window.open(qrData, '_blank');
-            win.focus();
-        }
-    }
 
     useEffect(() => {
         if (videoRef?.current && !scanner?.current) {
@@ -45,12 +40,12 @@ export default function QRReader(props) {
             // Start the scanner
             setLoading(true);
             scanner?.current.start()
-            .then(() => setScannerStarted(true))
-            .catch((err) => {
-                setScannerStarted(false);
-                console.log(err);
-            })
-            .finally(() => setLoading(false));
+                .then(() => setScannerStarted(true))
+                .catch((err) => {
+                    setScannerStarted(false);
+                    console.log(err);
+                })
+                .finally(() => setLoading(false));
         }
 
         // cleanup function
@@ -76,42 +71,28 @@ export default function QRReader(props) {
     return (
         <div className="qr-reader">
             <h1 className="text-center">QR Code Scanner</h1>
-            <video ref={videoRef} style={styles} />            
+            <video ref={videoRef} style={styles} />
             <div ref={qrBoxRef} className={boxClass.join(' ')}>
                 <div className="qr-frame">
                     {!loading && !scannerStarted &&
-                    <p className="qr-camera-error">
-                        Sorry, we couldn't start the camera.
-                        Check if your browser supports the camera and if it's enabled.
-                    </p>}
+                        <p className="qr-camera-error">
+                            Sorry, we couldn't start the camera.
+                            Check if your browser supports the camera and if it's enabled.
+                        </p>}
                     {!loading && scannerStarted &&
-                    <img
-                    src={QRFrame}
-                    alt="QR Frame"
-                    width={256}
-                    height={256}
-                    className="qr-frame"
-                    />}
+                        <img
+                            src={QRFrame}
+                            alt="QR Frame"
+                            width={256}
+                            height={256}
+                            className="qr-frame"
+                        />}
                     {!loading && scannerStarted && !qrData &&
-                    <div className="qr-scanner-line"></div>}
+                        <div className="qr-scanner-line"></div>}
                 </div>
             </div>
             {qrData && qrData.length > 0 &&
-            <div className="qr-scanned-result">
-                <div className="qr-scanned-result-close">
-                    <button onClick={onCloseResult}>X</button>
-                </div>
-                <form>
-                    <input
-                    type="text"
-                    value={qrData.length > 0 ? qrData : "No QR code scanned"}
-                    readOnly
-                    placeholder="QR Code"
-                    />
-                    <button type="button" className="qr-open-result-button"
-                        onClick={openInNewWindow}>Open in new window</button>
-                </form>
-            </div>}
+                <QRReaderResult url={qrData} onCloseResult={onCloseResult} />}
         </div>
     );
 
