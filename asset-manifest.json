@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/qrcode-generator/static/css/main.942886c3.css",
-    "main.js": "/qrcode-generator/static/js/main.97ac549a.js",
+    "main.css": "/qrcode-generator/static/css/main.6c9df091.css",
+    "main.js": "/qrcode-generator/static/js/main.36345ddb.js",
     "static/js/451.0feb8c36.chunk.js": "/qrcode-generator/static/js/451.0feb8c36.chunk.js",
     "static/media/logo.jpeg": "/qrcode-generator/static/media/logo.9747791f5f686aedbfdb.jpeg",
-    "static/media/qr-frame.svg": "/qrcode-generator/static/media/qr-frame.b85d57aa190dd4bfec8c3d66933ecfb8.svg",
     "index.html": "/qrcode-generator/index.html",
-    "main.942886c3.css.map": "/qrcode-generator/static/css/main.942886c3.css.map",
-    "main.97ac549a.js.map": "/qrcode-generator/static/js/main.97ac549a.js.map",
+    "static/media/qr-frame.svg": "/qrcode-generator/static/media/qr-frame.b85d57aa190dd4bfec8c3d66933ecfb8.svg",
+    "main.6c9df091.css.map": "/qrcode-generator/static/css/main.6c9df091.css.map",
+    "main.36345ddb.js.map": "/qrcode-generator/static/js/main.36345ddb.js.map",
     "451.0feb8c36.chunk.js.map": "/qrcode-generator/static/js/451.0feb8c36.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.942886c3.css",
-    "static/js/main.97ac549a.js"
+    "static/css/main.6c9df091.css",
+    "static/js/main.36345ddb.js"
   ]
 }
